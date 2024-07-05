@@ -4,9 +4,9 @@ void main() {
   runApp(MaterialApp(
     home: Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Fanavaran',
-          style: TextStyle(color: Colors.white),
+        title: Image.asset(
+          'assets/logo.png',
+          height: 30,  // Adjust the height as needed
         ),
         backgroundColor: const Color.fromRGBO(0, 59, 191, 1.0),
         centerTitle: true,
@@ -16,6 +16,7 @@ void main() {
   ));
 }
 
+// Home Widget
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -24,3 +25,6 @@ class Home extends StatelessWidget {
     return const Text('Hello, Client');
   }
 }
+
+// Container
+// -- Wraps Other Widgets
