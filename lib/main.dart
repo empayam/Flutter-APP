@@ -4,14 +4,23 @@ void main() {
   runApp(MaterialApp(
     home: Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Fanavaran',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Color.fromRGBO(0, 59, 191, 1.0),
+        backgroundColor: const Color.fromRGBO(0, 59, 191, 1.0),
         centerTitle: true,
       ),
-      body: const Text('Hello, Client'),
+      body: const Home()
     ),
   ));
+}
+
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text('Hello, Client');
+  }
 }
