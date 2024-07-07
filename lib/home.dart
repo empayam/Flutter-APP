@@ -20,7 +20,7 @@ class Home extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'assets/logo.png',
+              'assets/img/logo.png',
               height: 50, // Adjust the height as needed
             ),
             const SizedBox(height: 40),  // Space between image and text
