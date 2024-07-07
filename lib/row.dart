@@ -25,6 +25,7 @@ class Rows extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
+              height: 150,
               color: Colors.red,
               padding: const EdgeInsets.all(20),
               child: const Center(
@@ -34,6 +35,7 @@ class Rows extends StatelessWidget {
           ),
           Expanded(
             child: Container(
+              height: 150,
               color: Colors.green,
               padding: const EdgeInsets.all(20),
               child: const Center(
@@ -43,6 +45,7 @@ class Rows extends StatelessWidget {
           ),
           Expanded(
             child: Container(
+              height: 150,
               color: Colors.purple,
               padding: const EdgeInsets.all(20),
               child: const Center(
