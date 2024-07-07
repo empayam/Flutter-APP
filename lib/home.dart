@@ -28,7 +28,7 @@ class Home extends StatelessWidget {
               children: [
                 Image.asset(
                   'assets/img/logo.png',
-                  height: 150, // Adjust the height as needed
+                  height: 140, // Adjust the height as needed
                 ),
                 const SizedBox(height: 20),  // Space between image and text
                 const Text(
@@ -46,6 +46,7 @@ class Home extends StatelessWidget {
                   child: Column(
                     children: [
                       TextFormField(
+                        textAlign: TextAlign.center,
                         decoration: InputDecoration(
                           labelText: 'Username',
                           border: OutlineInputBorder(
@@ -58,6 +59,7 @@ class Home extends StatelessWidget {
                       ),
                       const SizedBox(height: 20),
                       TextFormField(
+                        textAlign: TextAlign.center,
                         obscureText: true,
                         decoration: InputDecoration(
                           labelText: 'Password',
@@ -82,7 +84,7 @@ class Home extends StatelessWidget {
                               borderRadius: BorderRadius.circular(5.0), // Border radius
                             ),
                             padding: const EdgeInsets.symmetric(
-                              vertical: 25,
+                              vertical: 20,
                             ),
                             textStyle: const TextStyle(
                               fontSize: 18,
@@ -95,6 +97,30 @@ class Home extends StatelessWidget {
                             style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400),// Ensure text color is white
                           ),
                         ),
+                      ),
+                      const SizedBox(height: 20),  // Space between button and additional options
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              // Handle forgot password action
+                            },
+                            child: const Text(
+                              'Forgot Password',
+                              style: TextStyle(color: Color(0xFF1A30D3)),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              // Handle register action
+                            },
+                            child: const Text(
+                              'Register',
+                              style: TextStyle(color: Color(0xFF1A30D3)),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),

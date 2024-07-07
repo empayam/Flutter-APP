@@ -1,18 +1,43 @@
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'com.google.gms.google-services' // Add this line if using Firebase or Google services
+    id 'com.android.tools.build:gradle:4.2.0' // Ensure the Gradle version matches with your Android Studio
+    id 'flutter'
+}
+
+android {
+    compileSdkVersion 31
+
+    defaultConfig {
+        applicationId "com.example.yourapp" // Replace with your application ID
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 1 // Adjust as needed
+        versionName "1.0" // Adjust as needed
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            // Signing configuration for release build
+            // Modify this section with your signing configurations if needed
+            signingConfig signingConfigs.release
+        }
+    }
+
+    buildToolsVersion '30.0.3'
+
+    lintOptions {
+        disable 'InvalidPackage'
     }
 }
 
-rootProject.buildDir = "../build"
-subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
-    project.evaluationDependsOn(":app")
+flutter {
+    source '../..' // Path to your Flutter project directory
 }
 
-tasks.register("clean", Delete) {
-    delete rootProject.buildDir
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // Add other dependencies as needed
 }
